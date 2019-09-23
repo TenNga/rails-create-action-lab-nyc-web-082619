@@ -1,7 +1,9 @@
 <!-- Create your form here -->
 
 <%= form_tag("/students", method: "post") do %>
-  <%= label_tag("Search for:") %>
-  <%= text_field_tag(:q) %>
-  <%= submit_tag("Search") %>
+  <%= label_tag("First Name:") %>
+  <%= text_field_tag(:first_name) %>
+  <%= label_tag("Last Name:") %>
+  <%= text_field_tag(:last_name) %>
+  <%= submit_tag("Submit") %>
 <% end %>
