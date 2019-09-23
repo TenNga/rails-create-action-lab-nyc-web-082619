@@ -9,11 +9,17 @@ class StudentsController < ApplicationController
   end
 
   def new
-    
+    @student = Student.new
   end
 
   def create
-    @student = Student.new
+    Student.create(student_params)
+  end
+  
+  private 
+  
+  def student_params
+    params.require(:student).permit(:first_name,:last_name)
   end
 
 end
